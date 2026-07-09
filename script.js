@@ -1,7 +1,11 @@
 const zip = document.getElementById("zip");
 const scoreDisplay = document.getElementById("score");
 const timeDisplay = document.getElementById("time");
-const startBtn = document.getElementById("startBtn");
+const highScoreDisplay = document.getElementById("highScore");
+
+let highScore = localStorage.getItem("highScore") || 0;
+
+highScoreDisplay.textContent = highScore;
 const gameArea = document.getElementById("gameArea");
 
 let score = 0;
