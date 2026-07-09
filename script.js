@@ -30,6 +30,15 @@ zip.addEventListener("click", () => {
     if (!gameRunning) return;
 
     score++;
+
+if (score > highScore) {
+    highScore = score;
+    localStorage.setItem("highScore", highScore);
+    highScoreDisplay.textContent = highScore;
+}
+
+scoreDisplay.textContent = score;
+moveZip();
     scoreDisplay.textContent = score;
     moveZip();
 });
